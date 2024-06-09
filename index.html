@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean String Generator</title>
+    <style>
+        body {
+            background-image: url('background.png');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #684627;
+            font-weight: bold;
+        }
+
+        label {
+            color: #684627;
+            font-weight: bold;
+        }
+
+        input[type="text"], select, button, textarea {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #BAB39C;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #result {
+            resize: both; /* Allows both vertical and horizontal resizing */
+            width: 90%;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Boolean String Generator</h1>
+        <label for="operator">Choose an operator:</label>
+        <select id="operator">
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+        </select><br>
+        <textarea id="companyList" rows="10" cols="30" placeholder="Enter companies, one per line..."></textarea><br>
+        <button onclick="generateBooleanString()">Generate Boolean String</button><br>
+        <textarea id="result" readonly></textarea>
+    </div>
+
+    <script>
+        function generateBooleanString() {
+            const operator = document.getElementById('operator').value;
+            const companyList = document.getElementById('companyList').value.split('\n');
+            const booleanString = companyList.map(company => `"${company.trim()}"`).join(` ${operator} `);
+            document.getElementById('result').value = booleanString;
+        }
+    </script>
+</body>
+</html>
+
