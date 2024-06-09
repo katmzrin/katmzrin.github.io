@@ -13,8 +13,8 @@ Boolean String Generator is a web-based tool designed for talent sourcers and re
 
 ## Usage
 
-1. Open the [Boolean String Generator](https://<your-username>.github.io/) in your web browser.
-2. Enter the list of companies, one per line, in the provided text area.
-3. Select the operator (`AND` or `OR`) from the dropdown menu.
-4. Click the "Generate Boolean String" button to generate the Boolean string.
-5. Copy the generated Boolean string from the output field.
+1. Open the [Boolean String Generator](https://<katmzrin>.github.io/) in your web browser.
+3. Enter the list of companies, one per line, in the provided text area.
+4. Select the operator (`AND` or `OR`) from the dropdown menu.
+5. Click the "Generate Boolean String" button to generate the Boolean string.
+6. Copy the generated Boolean string from the output field.
